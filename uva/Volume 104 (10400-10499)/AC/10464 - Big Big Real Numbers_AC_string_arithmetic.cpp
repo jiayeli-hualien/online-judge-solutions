@@ -100,9 +100,6 @@ int main() {
         Decimal a = parseDecimal(firstText);
         Decimal b = parseDecimal(secondText);
 
-        // Pad the integer magnitudes so their implicit decimal points align.
-        a.digits.insert(0, 1000, '0');
-        b.digits.insert(0, 1000, '0');
         if (a.negative == b.negative) {
             cout << formatResult(addMagnitude(a.digits, b.digits), a.negative) << '\n';
         } else {
